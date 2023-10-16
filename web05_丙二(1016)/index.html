@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>勞動部勞動力發展署─運動廣場連結網</title>
+  <style>
+    body {
+      background: #42413c;
+    }
+
+    #main {
+      width: 1024px;
+      height: 768px;
+      background: #fff;
+      margin: auto;
+    }
+
+    #top {
+      width: 1024px;
+      height: 90px;
+      background: #00B0F0;
+    }
+
+    .logo {
+      width: 180px;
+      height: 90px;
+    }
+
+    .main-title {
+      width: calc(1024px - 180px);
+      height: 90px;
+      font-size: 52px;
+      font-family: '標楷體';
+      color: #fff;
+      text-shadow: 10px 10px 15px #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    td {
+      padding: 0;
+    }
+
+    #menu {
+      width: 1024px;
+      height: 25px;
+      background: yellowgreen;
+    }
+
+    #menu a {
+      display: block;
+      background: #eee;
+      color: #000;
+      text-decoration: none;
+    }
+
+    #menu a:hover {
+      background: #ff0;
+      color: #F00;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* 不抖動 平均欄寬 */
+    #menu table {
+      table-layout: fixed;
+    }
+
+
+
+    #content {
+      /* box-sizing: border-box; */
+      width: 984px;
+      height: 568px;
+      padding: 20px;
+      background: #fff;
+      color: #000;
+      font-size: 14px;
+    }
+
+    iframe {
+      width: 984px;
+      height: 568px;
+    }
+
+
+    #footer {
+      width: 1024px;
+      height: 45px;
+      background: #CCCCCC;
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <div id="top">
+      <table>
+        <tr>
+          <td class="logo">
+            <a href="./index.html">
+              <img src="./images/logo.png" alt="運動廣場連結網-回首頁" title="運動廣場連結網-回首頁"></a>
+          </td>
+          <td class="main-title">運動廣場連結網</td>
+        </tr>
+      </table>
+    </div>
+    <div id="menu">
+      <table>
+        <tr>
+          <td><a href="./index.html">首頁</a></td>
+          <td><a href="./results/health.html" target="iframe">健康天地</a></td>
+          <td><a href="./results/basketball.html" target="iframe">籃球介紹</a></td>
+          <td><a href="./results/baseball.html" target="iframe">棒球介紹</a></td>
+          <td><a href="./results/swimming.html" target="iframe">游泳介紹</a></td>
+          <td><a href="./results/msgboard.html" target="iframe">訪客留言</a></td>
+          <td><a href="./results/reference.html" target="iframe">資料來源</a></td>
+        </tr>
+      </table>
+    </div>
+    <div id="content"><iframe src="./results/main.html" frameborder="0" name="iframe"></iframe></div>
+    <div id="footer">
+      網頁設計及維護：05徐馨蕾<br>
+      最近更新日期：2023/10/16
+    </div>
+  </div>
+</body>
+
+</html>
