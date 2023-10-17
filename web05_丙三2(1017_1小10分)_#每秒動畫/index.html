@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>國家公園介紹網</title>
+  <style>
+    #main {
+      width: 1024px;
+      height: 768px;
+      margin: auto;
+    }
+
+    #top {
+      width: 1000px;
+      height: 65px;
+      background: #00f;
+      margin: auto;
+    }
+
+    #top #box {
+      width: 65px;
+      height: 65px;
+      margin: auto;
+    }
+
+    #top #box img {
+      width: 100%;
+      height: 100%;
+    }
+
+
+    #marquee {
+      width: 800px;
+      height: 29px;
+      float: right;
+      /* background: yellowgreen; */
+      margin-right: 12px;
+
+    }
+
+    #content {
+      width: 800px;
+      height: 654px;
+      float: right;
+      /* background: yellow; */
+      margin-right: 12px;
+    }
+
+    iframe {
+      width: 800px;
+      height: 654px;
+    }
+
+    #menu {
+      width: 200px;
+      height: 683px;
+      float: left;
+      background: #0ff;
+      margin-left: 12px;
+      text-align: center;
+    }
+
+    #menu table {
+      margin: auto;
+    }
+
+    #menu td {
+      height: 30px;
+    }
+
+    #menu img {
+      width: 120px;
+      height: 40px;
+    }
+
+    #menu img:hover {
+      filter: hue-rotate(200deg);
+    }
+
+    #footer {
+      width: 1000px;
+      height: 20px;
+      overflow: hidden;
+      margin: auto;
+      /* background: turquoise; */
+      text-align: center;
+      font-family: '標楷體';
+      font-size: 16px;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="main">
+
+    <div id="top">
+      <div id="box"><a href="./index.html"><img id="img" src="./images/park0307.jpg" alt=""></a></div>
+    </div>
+
+    <div id="marquee">
+      <marquee behavior="" direction="">歡迎進入國家公園介紹網，本網站有詳細的國家公園介紹哦！</marquee>
+    </div>
+
+    <div id="menu">
+      <table>
+        <tr>
+          <td><a href="./park/yangmingshan.html" target="iframe"><img src="./images/park0302.jpg" alt="陽明山國家公園"
+                title="陽明山國家公園"></a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="./park/sheipa.html" target="iframe"><img src="./images/park0303.jpg" alt="雪霸國家公園"
+                title="雪霸國家公園"></a>
+
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td><img src="./images/park0304.jpg" alt="太魯閣國家公園" title="太魯閣國家公園">
+
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td><img src="./images/park0305.jpg" alt="玉山國家公園" title="玉山國家公園">
+        </tr>
+      </table>
+
+      <a href="./others/park.mp3" download="">
+        <p>檔案下載</p>
+      </a>
+    </div>
+    <div id="content"><iframe name="iframe" src="./others/main.html"></iframe></div>
+
+    <div id="footer">網頁設計及維護：05徐馨蕾、最近更新日期：2023/10/17</div>
+
+
+  </div>
+
+
+  <script>
+    const img = document.getElementById('img')
+    let i = 1
+
+    const change = () => {
+      if (i < 4) {
+        img.src = `./images/park030${i + 6}.jpg`
+        i++
+      } else if (i === 4) {
+        img.src = `./images/park0310.jpg`
+        i++
+      } else if (i > 4) {
+        i = 1
+        img.src = `./images/park030${i + 6}.jpg`
+        i++
+      }
+    }
+
+    setInterval(change, 1000)
+    change()
+
+
+  </script>
+
+</body>
+
+</html>

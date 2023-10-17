@@ -134,18 +134,18 @@
 
 
   <script>
-    // const imgs = document.querySelectorAll('.img')
-    // const big = document.querySelector('#big')
+    const imgs = document.querySelectorAll('.img')
+    const big = document.querySelector('#big')
 
-    // // const imgs = document.getElementsByClassName('img')
-    // // console.log(imgs)
-    // // const big = document.getElementById('big')
+    // const imgs = document.getElementsByClassName('img')
+    // console.log(imgs)
+    // const big = document.getElementById('big')
 
-    // imgs.forEach((img, index) => {
-    //   img.onclick = function () {
-    //     big.src = `../images/020${index + 2}A.png`
-    //   }
-    // })
+    imgs.forEach((img, index) => {
+      img.onclick = function () {
+        big.src = `../images/020${index + 2}A.png`
+      }
+    })
 
 
 
@@ -153,14 +153,14 @@
   </script>
 
 
-  <script src="../others/17300-104302/jquery-2.1.4.min.js"></script>
+  <!-- <script src="../others/17300-104302/jquery-2.1.4.min.js"></script>
   <script>
     $('.img').each((index, img) => {
       $(img).on('click', function () {
         $('#big').attr('src', `../images/020${index + 2}A.png`)
       })
-    })
-    // 備註要再看老師
+    }) -->
+  // 備註要再看老師
 
   </script>
 </body>
