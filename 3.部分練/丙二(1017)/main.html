@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #right {
+      width: 590px;
+      height: 460px;
+      background: #333;
+    }
+
+    #right table {
+      margin: auto;
+      font-size: 14px;
+      color: #ff0;
+      text-align: center;
+    }
+
+    #big {
+      margin-top: 5px;
+      width: 570px;
+      height: 330px;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div id="right">
+
+    <table>
+      <tr>
+        <td colspan="4"><img id="big" src="./image/0202A.png"></td>
+
+      </tr>
+      <tr>
+        <td><img class="img" src="./image/0202B.png"></td>
+        <td><img class="img" src="./image/0203B.png"></td>
+        <td><img class="img" src="./image/0204B.png"></td>
+        <td><img class="img" src="./image/0205B.png"></td>
+
+      </tr>
+      <tr>
+        <td>第30屆倫敦奧運 </td>
+        <td> 許淑淨奪舉重銀牌</td>
+        <td> 第26屆深圳世大運</td>
+        <td> 第27屆喀山世大運</td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    const imgs = document.querySelectorAll('.img')
+    const big = document.querySelector('#big')
+
+
+
+    imgs.forEach((img, index) => {
+      img.onclick = () => {
+        big.src = `./image/020${2 + index}A.png`
+      }
+    });
+
+
+
+
+  </script>
+</body>
+
+</html>
