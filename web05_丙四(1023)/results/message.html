@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #a {
+      text-align: center;
+      border-collapse: collapse;
+      margin: auto;
+    }
+
+    #a td:nth-child(1) {
+      width: 150px;
+    }
+
+    #a td:nth-child(2) {
+      width: 350px;
+    }
+
+    #a td {
+      line-height: 32px;
+      border: 1px solid #000;
+      background: #fdd;
+    }
+
+    #btn {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+
+    #b {
+      margin: auto;
+      border-collapse: collapse;
+    }
+
+    #b td:nth-child(1) {
+      text-align: center;
+      width: 150px;
+    }
+
+    #b td:nth-child(2) {
+      width: 350px;
+    }
+
+    #b td {
+      line-height: 32px;
+      border: 1px solid #000;
+      background: #ff9;
+    }
+  </style>
+</head>
+
+<body>
+  <table id="a">
+    <tr>
+      <td>公司名稱</td>
+      <td>大家來購物有限公司</td>
+    </tr>
+    <tr>
+      <td>公司電子信箱</td>
+      <td>service@test.labor.gov.tw</td>
+    </tr>
+    <tr>
+      <td>服務項目</td>
+      <td>網路購物服務</td>
+    </tr>
+  </table>
+  <br>
+
+  <form action="">
+    <table id="b">
+      <tr>
+        <td>客戶姓名</td>
+        <td><input type="text" size="20"></td>
+      </tr>
+      <tr>
+        <td>電子信箱</td>
+        <td><input type="text" size="30"></td>
+      </tr>
+      <tr>
+        <td>意見留言</td>
+        <td><textarea name="" id="" cols="30" rows="5"></textarea></td>
+      </tr>
+    </table>
+
+    <br>
+    <div id="btn">
+      <!-- <input type="submit" value="送出" id="submit" onclick="alert('歡迎蒞臨本網站，您的寶貴意見我們會儘速處理與回覆，謝謝！')"> -->
+      <input type="submit" value="送出" id="submit" onclick="show()">
+
+      <input type="reset" value="重製">
+    </div>
+  </form>
+  <script>
+    show = () => {
+      alert('歡迎蒞臨本網站，您的寶貴意見我們會儘速處理與回覆，謝謝！')
+    }
+  </script>
+</body>
+
+</html>
