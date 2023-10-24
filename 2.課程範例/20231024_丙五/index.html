@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>書曼的旅遊相簿</title>
+  <style>
+    body {
+      background-color: #333333;
+    }
+
+    #main {
+      width: 1024px;
+      height: 768px;
+      margin: auto;
+      background: #ffc;
+    }
+
+    #left {
+      width: 150px;
+      height: 768px;
+      float: left;
+      /* background: lightblue; */
+    }
+
+    #left table {
+      width: 150px;
+      text-align: center;
+    }
+
+    #left .info {
+      font-size: 12px;
+      font-family: "新細明體";
+      color: #f00;
+      font-weight: bolder;
+    }
+
+    /* #left .img:hover {
+      filter: hue-rotate(120deg);
+    } */
+
+    #right {
+      width: 874px;
+      height: 768px;
+      float: right;
+      /* background: lightgreen; */
+    }
+
+    #right marquee {
+      width: 874px;
+      height: 50px;
+      font-size: 24px;
+      font-family: "標楷體";
+      font-weight: bolder;
+      color: #f00;
+      text-align: center;
+      line-height: 50px;
+    }
+
+    /*
+      874 - 72=802
+      718 - 72=646
+    */
+    #right #content {
+      width: 802px;
+      height: 646px;
+      padding: 36px;
+    }
+
+    #right iframe {
+      width: 802px;
+      height: 646px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 背景音樂 -->
+  <audio src="./music/0501.mp3" autoplay></audio>
+  <div id="main">
+    <div id="left">
+      <table>
+        <tr>
+          <td><img src="./images/0508.gif" alt="書曼的旅遊相簿" title="書曼的旅遊相簿"></td>
+        </tr>
+        <tr>
+          <td><img src="./images/0507.jpg" alt="書曼" title="書曼"></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><img class="img" src="./images/0501b.gif" alt="金門逍遙遊" title="金門逍遙遊"></td>
+        </tr>
+        <tr>
+          <td><img class="img" src="./images/0502b.gif" alt="卡蹓到馬祖" title="卡蹓到馬祖"></td>
+        </tr>
+        <tr>
+          <td><img class="img" src="./images/0503b.gif" alt="踏浪澎湖行" title="踏浪澎湖行"></td>
+        </tr>
+        <tr>
+          <td><img class="img" src="./images/0504b.gif" alt="綠島唱夜曲" title="綠島唱夜曲"></td>
+        </tr>
+        <tr>
+          <td>
+            <a href="./album5/album5.html" target="iframe">
+              <img class="img" src="./images/0505b.gif" alt="蘭嶼賞魚去" title="蘭嶼賞魚去">
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="info">
+            日期：2023/10/24<br>
+            維護：00張凱富
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>
+            <a href="./index.html">
+              <img class="img" src="./images/0506b.gif" alt="回首頁" title="回首頁">
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="right">
+      <marquee>歡迎來到書曼的旅遊相簿，本網站有我的旅遊影像紀錄介紹耶！</marquee>
+      <div id="content">
+        <iframe src="./main.html" frameborder="0" name="iframe"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="./jquery-2.1.4.min.js"></script>
+  <script>
+    // js
+    // const imgs = document.querySelectorAll('.img')
+    // imgs.forEach(function (img, index) {
+    //   img.addEventListener('mouseover', function () {
+    //     img.src = `./images/050${index + 1}r.gif`
+    //   })
+    //   img.addEventListener('mouseout', function () {
+    //     img.src = `./images/050${index + 1}b.gif`
+    //   })
+    // })
+
+    // jq
+    $('.img').each(function (index, img) {
+      $(img).hover(function () {
+        $(img).attr('src', `./images/050${index + 1}r.gif`)
+      }, function () {
+        $(img).attr('src', `./images/050${index + 1}b.gif`)
+      })
+    })
+  </script>
+</body>
+
+</html>
