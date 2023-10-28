@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: auto;
+      text-align: center;
+    }
+
+
+    td {
+      background-color: #ff9;
+      border: 1px solid #000;
+      width: 400px;
+    }
+
+    tr:nth-child(1),
+    tr:nth-child(3) {
+      height: 100px;
+    }
+
+    tr:nth-child(2) {
+      height: 150px;
+    }
+
+    img {
+      height: 150px;
+      vertical-align: middle;
+    }
+
+    #box {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="">
+    <table>
+      <tr>
+        <td>真皮皮包</td>
+        <td>真皮短夾</td>
+      </tr>
+      <tr>
+        <td><img src="../images/0403.jpg"></td>
+        <td><img src="../images/0404.jpg"></td>
+
+      </tr>
+      <tr>
+        <td>
+          <input value="購買" type="radio" name="a" class="a" checked>購買
+          <input value="不購買" type="radio" name="a" class="a">不購買
+          <input value="考慮中" type="radio" name="a" class="a">考慮中
+        </td>
+        <td>
+          <input value="購買" type="radio" name="b" class="b">購買
+          <input value="不購買" type="radio" name="b" class="b">不購買
+          <input value="考慮中" type="radio" name="b" class="b" checked>考慮中
+        </td>
+      </tr>
+    </table>
+    <br>
+    <div id="box">
+      <input type="submit" value="送出" onclick="alert(`
+      流行皮件選購確認：
+   
+      ●真皮皮包：${a.value}
+      ●真皮短夾：${b.value}`)">　
+      <input type="reset" value="重置">
+    </div>
+  </form>
+
+  <script>
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
