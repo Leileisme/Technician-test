@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      font-size: 20px;
+      font-family: '標楷體';
+      font-weight: bolder;
+      text-decoration: underline;
+      color: #0000FF;
+      text-align: center;
+    }
+
+    table {
+      margin: auto;
+      text-align: center;
+    }
+
+    .imgs {
+      width: 60px;
+      height: 45px;
+      border: #0000FF medium solid;
+      cursor: pointer;
+    }
+
+    .imgs:hover {
+      border: #00FFFF medium solid;
+    }
+
+    #big {
+      width: 400px;
+      height: 300px;
+      border: #0000FF 5px solid;
+
+    }
+  </style>
+</head>
+
+<body>
+  <h1>蘭嶼賞魚去</h1>
+  <table>
+    <tr>
+      <td colspan="5"><img src="../images/0551.jpg" id="big"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><img src="../images/0551.jpg" class="imgs"></td>
+      <td><img src="../images/0552.jpg" class="imgs"></td>
+      <td><img src="../images/0553.jpg" class="imgs"></td>
+      <td><img src="../images/0554.jpg" class="imgs"></td>
+      <td><img src="../images/0555.jpg" class="imgs"></td>
+
+    </tr>
+  </table>
+
+  <script>
+    const big = document.querySelector('#big')
+    const imgs = document.querySelectorAll('.imgs')
+
+    imgs.forEach((element, index) => {
+      element.addEventListener('click', () => {
+        big.src = `../images/055${1 + index}.jpg`
+      })
+
+    });
+
+  </script>
+
+</body>
+
+</html>
