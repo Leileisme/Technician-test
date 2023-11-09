@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #L {
+      width: 280px;
+      height: 460px;
+      float: left;
+      border: 1px solid #999;
+    }
+
+    h1 {
+      font-size: 16px;
+      font-weight: bolder;
+      margin-left: 10px;
+    }
+
+    #L table {
+      width: 270px;
+      margin: auto;
+    }
+
+    #L th {
+      background-color: #3399FF;
+      font-size: 14px;
+      color: #FFFFFF;
+      line-height: 2;
+    }
+
+    #L td {
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    #L tr:nth-child(odd) {
+      background-color: #DDDDDD;
+    }
+
+    #L tr:nth-child(even) {
+      background-color: #FFFFCC;
+    }
+
+    #R {
+      width: 590px;
+      height: 460px;
+      float: right;
+      border: 1px solid #999;
+      background-color: #333;
+      font-size: 14px;
+      color: #FFFF00;
+
+    }
+
+    #R table {
+      width: 270px;
+      text-align: center;
+      margin: auto;
+    }
+
+    #big {
+      width: 570px;
+      height: 340px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="L">
+    <h1>最新消息</h1>
+    <table>
+      <tr>
+        <th>主題</th>
+        <th>發布日期</th>
+      </tr>
+      <tr>
+        <td><img src="../images/0201.png">公告全國技能競賽相關事宜</td>
+        <td>112/11/09</td>
+      </tr>
+      <tr>
+        <td><img src="../images/0201.png">公告即測即評及發證相關事宜</td>
+        <td>112/11/09</td>
+      </tr>
+      <tr>
+        <td><img src="../images/0201.png">公告網頁設計修題相關事宜</td>
+        <td>112/11/09</td>
+      </tr>
+      <tr>
+        <td><img src="../images/0201.png">公告網路架設應檢相關事宜</td>
+        <td>112/11/09</td>
+      </tr>
+    </table>
+  </div>
+  <div id="R">
+    <table>
+      <tr>
+        <td colspan="4"><img src="../images/0202A.png" id="big"></td>
+      </tr>
+      <tr>
+        <td><img src="../images/0202B.png" class="imgs"></td>
+        <td><img src="../images/0203B.png" class="imgs"></td>
+        <td><img src="../images/0204B.png" class="imgs"></td>
+        <td><img src="../images/0205B.png" class="imgs"></td>
+
+      </tr>
+      <tr>
+        <td>第30屆倫敦奧運</td>
+        <td>許淑淨奪舉重銀牌</td>
+        <td>第26屆深圳世大運</td>
+        <td>第27屆喀山世大運</td>
+      </tr>
+    </table>
+  </div>
+  <script>
+    const big = document.querySelector('#big')
+    const imgs = document.querySelectorAll('.imgs')
+
+    imgs.forEach((el, index) => {
+      el.addEventListener('click', () => {
+        big.src = `../images/020${2 + index}A.png`
+      })
+    });
+
+  </script>
+</body>
+
+</html>

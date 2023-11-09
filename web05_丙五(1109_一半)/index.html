@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>書曼的旅遊相簿</title>
+  <style>
+    body {
+      background-color: #333;
+    }
+
+    #main {
+      width: 1024px;
+      height: 768px;
+      margin: auto;
+      background-color: #FFFFCC;
+    }
+
+    #menu {
+      width: 150px;
+      height: 768px;
+      float: left;
+      /* background-color: aqua; */
+    }
+
+    #marquee {
+      width: 874px;
+      height: 50px;
+      float: right;
+      /* background-color: yellowgreen; */
+    }
+
+    #content {
+      width: 802px;
+      height: 646px;
+      float: right;
+      /* background-color: violet; */
+      padding: 36px;
+    }
+
+    iframe {
+      width: 802px;
+      height: 646px;
+    }
+
+    table {
+      font-family: '新細明體';
+      font-size: 12px;
+      font-weight: bolder;
+      color: #FF0000;
+      text-align: center;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <audio src="./music/0501.mp3" autoplay></audio>
+  <div id="main">
+    <div id="menu">
+      <table>
+        <tr>
+          <td><img src="./images/0508.gif" alt="書曼的旅遊相簿" title="書曼的旅遊相簿"></td>
+        </tr>
+        <tr>
+          <td><img src="./images/0507.jpg" alt="書曼" title="書曼"></td>
+        </tr>
+        <tr>
+          <td>　</td>
+        </tr>
+        <!-- 4 -->
+        <tr>
+          <td><img src="./images/0501b.gif" alt="金門逍遙遊" title="金門逍遙遊" class="imgs"></td>
+        </tr>
+        <!-- 5 -->
+        <tr>
+          <td><img src="./images/0502b.gif" alt="卡蹓到馬祖" title="卡蹓到馬祖" class="imgs"></td>
+
+        </tr>
+        <!-- 6 -->
+        <tr>
+          <td><img src="./images/0503b.gif" alt="踏浪澎湖行" title="踏浪澎湖行" class="imgs"></td>
+
+        </tr>
+        <!-- 7 -->
+        <tr>
+          <td><img src="./images/0504b.gif" alt="綠島唱夜曲" title="綠島唱夜曲" class="imgs"></td>
+
+        </tr>
+        <!-- 8 -->
+        <tr>
+          <td><img src="./images/0505b.gif" alt="蘭嶼賞魚去" title="蘭嶼賞魚去" class="imgs"></td>
+
+        </tr>
+        <!-- 9 -->
+        <tr>
+          <td>　</td>
+        </tr>
+        <!-- 10 -->
+        <tr>
+          <td>
+            日期：2023/11/0<br>
+            維護：05徐馨蕾
+          </td>
+        </tr>
+        <!-- 11 -->
+        <tr>
+          <td>　</td>
+        </tr>
+        <!-- 12 -->
+        <tr>
+          <td><img src="./images/0506b.gif" alt="回首頁" title="回首頁" class="imgs"></td>
+
+        </tr>
+      </table>
+    </div>
+    <div id="marquee">
+      <marquee behavior="" direction="">歡迎來到書曼的旅遊相簿，本網站有我的旅遊影像紀錄介紹耶！</marquee>
+    </div>
+    <div id="content"><iframe src="./main.html" name="iframe" frameborder="0"></iframe></div>
+
+  </div>
+
+  <script>
+
+    const imgs = document.querySelectorAll('.imgs')
+    imgs.forEach((element, index) => {
+      element.addEventListener('mouseover', () => {
+        element.src = `./images/050${1 + index}r.gif`
+      })
+
+      element.addEventListener('mouseout', () => {
+        element.src = `./images/050${1 + index}b.gif`
+      })
+    });
+  </script>
+
+</body>
+
+</html>
